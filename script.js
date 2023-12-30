@@ -122,9 +122,24 @@ function populateSearchResults(results) {
     })
 
     container.appendChild(resultDiv);
+
+  
+  
   });
 }
-
+  
 map.on('moveend', e => {
   requestFoodBankData();
 })
+
+
+
+function togglePopup() {
+  var popup = document.getElementById("popup");
+  popup.style.display = (popup.style.display === "none" || popup.style.display === "") ? "block" : "none";
+}
+
+function hidePopup() {
+  var popup = document.getElementById("popup");
+  popup.style.display = "none";
+}
