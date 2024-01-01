@@ -1,38 +1,41 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: 'DotGothic16', sans-serif ;
 }
 
 html {
   position: absolute;
   height: 100%;
   width: 100%;
-  background: #5d7a55;c
-  font-family: 'DotGothic16';
+  background: #5d7a55;
   background-repeat: repeat;
   background-size: 60%;
   overflow-x: hidden;
 }
 
+.app-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
 #map {
-  width: 100%;`
-  height: 100%;
-  font-family: 'DotGothic16';
+  height: 100vh;
+  flex: 1;
+  flex-direction: row;
+  align-items: stretch;
 }
 
 
 #search-results-container {
+  width: 25%;
+  max-width: 500px;
   padding: 20px;
-  left: 0px;
   font-size: 16px;
-  margin-right: auto;
   background-color: white;
-  border-radius: 15px;
   font-style: 'DotGothic16';
   z-index: 7;
-  position: absolute;
-  width: 25%;
-  height: 100%;
   box-sizing: border-box;
   overflow:scroll;
 }
@@ -57,7 +60,6 @@ html {
   background-color: #a7d49b;
   border-radius: 15px;
   font-size: 12px;
-  font-family: 'DotGothic16', sans-serif ;
   margin: 10px 0;
   cursor: pointer;
   padding: 15px;
@@ -74,7 +76,6 @@ html {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 15px;
   font-size: 12px;
-  font-family: 'DotGothic16', sans-serif ;
   margin: 10px 0;
   cursor: pointer;
   padding: 15px;
@@ -91,15 +92,23 @@ html {
 }
 
 @media (max-width: 767px) {
-  .container {
-    flex-direction: column; 
+  .app-container {
+    flex-direction: column-reverse; 
   }
 
-  .artist {
-    width: 100%; 
-    margin-right: 0; 
+  #search-results-container {
+    width: 100%;
   }
+
+  .chopcorner {
+    top: 10px;
+    left: 10px;
+    bottom: unset;
+    right: unset;
+  }
+
 }
+
 
 @media (max-width: 767px) {
   .description {
