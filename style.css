@@ -106,7 +106,12 @@ html {
     bottom: unset;
     right: unset;
   }
-
+  .popup {
+    top: 10px;
+    left: 10px;
+    bottom: unset;
+    right: unset;
+  }
 }
 
 
