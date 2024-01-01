@@ -98,6 +98,7 @@ html {
 
   #search-results-container {
     width: 100%;
+    max-height: 45%;
   }
 
   .chopcorner {
