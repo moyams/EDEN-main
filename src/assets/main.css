@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
 * {
   margin: 0;
   padding: 0;
-  font-family: 'DotGothic16', sans-serif ;
+  font-family: 'DotGothic16', sans-serif;
 }
 
 html {
@@ -20,7 +22,7 @@ html {
   display: flex;
 }
 
-#map {
+.map-container {
   height: 100dvh;
   flex: 1;
   flex-direction: row;
@@ -37,7 +39,24 @@ html {
   font-style: 'DotGothic16';
   z-index: 7;
   box-sizing: border-box;
-  overflow:scroll;
+  overflow: scroll;
+
+}
+
+#filter-box {
+  width: 25%;
+  max-width: 500px;
+  padding: 20px;
+  font-size: 16px;
+  background-color: white;
+  font-style: 'DotGothic16';
+  z-index: 7;
+  box-sizing: border-box;
+  max-height: 20%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+
 }
 
 .search-result {
@@ -51,11 +70,14 @@ html {
   cursor: pointer;
   padding: 15px;
   box-sizing: border-box;
+
 }
 
 .chopcorner {
-  bottom: 10px; /* Adjust the value to your preference */
-  right: 10px; /* Adjust the value to your preference */
+  bottom: 10px;
+  /* Adjust the value to your preference */
+  right: 10px;
+  /* Adjust the value to your preference */
   width: 200px;
   background-color: #a7d49b;
   border-radius: 15px;
@@ -70,8 +92,10 @@ html {
 .popup {
   display: none;
   position: absolute;
-  bottom: 50px; /* Adjust the value to your preference */
-  right: 50px; /* Adjust the value to your preference */
+  bottom: 50px;
+  /* Adjust the value to your preference */
+  right: 50px;
+  /* Adjust the value to your preference */
   background-color: #a7d49b;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 15px;
@@ -93,7 +117,7 @@ html {
 
 @media (max-width: 767px) {
   .app-container {
-    flex-direction: column-reverse; 
+    flex-direction: column-reverse;
   }
 
   #search-results-container {
@@ -107,6 +131,7 @@ html {
     bottom: unset;
     right: unset;
   }
+
   .popup {
     top: 10px;
     left: 10px;
@@ -118,6 +143,7 @@ html {
 
 @media (max-width: 767px) {
   .description {
-    font-size: 18px; /* Adjust font size for smaller screens */
+    font-size: 18px;
+    /* Adjust font size for smaller screens */
   }
 }
